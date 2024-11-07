@@ -5,14 +5,6 @@ source(here::here("R/03-prep-data.R"))
 
 # Dimensions --------------------------------------------------------------
 
-# Fuel type
-dim_fuel <- 
-  usage |> 
-  select(fuel) |> 
-  distinct() |> 
-  arrange(fuel) |> 
-  rowid_to_column(var = "fuel_key")
-
 # Start datetime
 start <- 
   usage |> 
@@ -77,13 +69,6 @@ fct_half_hourly_usage <-
     )
   ) |> 
   left_join(
-    select(
-      dim_fuel,
-      fuel_key,
-      fuel
-    )
-  ) |> 
-  left_join(
     dim_tariff,
     relationship = "many-to-many"
   ) |> 
@@ -113,7 +98,7 @@ fct_daily_usage <-
   summarise(
     consumption_kwh = sum(consumption_kwh),
     cost_p = sum(cost_p),
-    .by = c(date_key, fuel_key, tariff_key)
+    .by = c(date_key, tariff_key)
   ) |> 
   left_join(
     select(
