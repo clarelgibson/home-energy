@@ -1,29 +1,34 @@
-# SDG Template
-Template repo for @surreydatagirl data viz/analytics projects. Template includes directories for data and R scripts. Other standard directories you may need include:
--  `ref`: for any reference documentation
--  `img`: for image files
--  `products`: for any products built with the clean data
+# Home energy
+
+Would an off-peak electricity tariff be cost effective for us based on our usage?
 
 ## Description
-Longer description of the project.
+
+In this project, I use the half-hourly gas and electricity consumption data provider by my energy supplier to better understand my household energy usage. In particular I want to find out whether we could consume enough of our electricity during the off-peak hours (between 00:30 and 05:30) so that it would be cost-effective to switch to an off-peak tariff.
 
 ## Getting started
+
 ### Data
--   List the data sources and links used in the project.
+
+-   Electricity and gas half-hourly consumption data provided by [Octopus Energy](https://octopus.energy).
 
 ### Packages
+
 This project uses `renv` for package management. To set up the packages needed for this project run the following code in the console:
 
-```r
+``` r
 install.packages("renv")
 renv::init()
 ```
 
 ## Author
-- [Clare Gibson](https://www.surreydatagirl.com) - [surreydatagirl@gmail.com](mailto:surreydatagirl.com)
+
+-   [Clare Gibson](https://www.surreydatagirl.com) - [surreydatagirl\@gmail.com](mailto:surreydatagirl.com)
 
 ## Licence
+
 This project is licensed under the CC0 1.0 Universal licence. See the [LICENSE](./LICENSE) file for details.
 
 ## Acknowledgements
+
 -   List any reference material used in this project.
