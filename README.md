@@ -10,7 +10,7 @@ In this project, I use the half-hourly gas and electricity consumption data prov
 
 ### Data
 
--   Electricity and gas half-hourly consumption data provided by [Octopus Energy](https://octopus.energy).
+-   [Electricity and gas half-hourly consumption data](https://drive.google.com/drive/folders/1Op52WsW6nLvQgRxRpubeX0Vvp98UR8O0?usp=share_link) provided by [Octopus Energy](https://octopus.energy). Save in `data/src/`.
 
 ### Packages
 
